@@ -1,0 +1,39 @@
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.logo {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+
+  font-size: 28px;
+}
+header {
+  display: flex;
+  background-color: red;
+  background-color: var(--primary-color);
+  color: var(--font-color-white);
+  a {
+        text-decoration-line: none;
+        color:  inherit;
+      }
+  .nav-wrapper {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  .ul-wrapper {
+    display: flex;
+    
+    gap: 15px;
+
+    li {
+      list-style: none;
+      
+    }
+  }
+}
