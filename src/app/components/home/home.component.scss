@@ -1,0 +1,14 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    
+
+    #search{
+        padding: 0.7em;
+        border-radius: 10px;
+        margin-bottom: 50px;
+    }
+}
