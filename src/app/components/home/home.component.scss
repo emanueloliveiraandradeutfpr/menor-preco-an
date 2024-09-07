@@ -5,10 +5,20 @@ main{
     justify-content: center;
     height: 90vh;
     
-
-    #search{
-        padding: 0.7em;
-        border-radius: 10px;
+    .search-wrapper{
+        display: flex;
+        gap: 10px ;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 50px;
+        width: 100%;
+    }
+    #searchTerm{
+        padding: 1em;
+        border-radius: 20px;  
+        width: 60%;
+        background-color: var(--light-grey);
+        
+        
     }
 }

@@ -1,9 +1,19 @@
 <main>
     <app-scanner></app-scanner>
 
-    <div>
-        <label for="search">Busca</label>
-        <input type="text" name="search" id="search">
-    </div>
+    <form [formGroup]="useForm">
+        <div class="search-wrapper">
+            <label for="searchTerm">Busca</label>
+            <input
+                formControlName="searchTerm"
+                type="text"
+                name="searchTerm"
+                id="searchTerm"
+                placeholder="Arroz">
+        </div>
+        <button type="button" (click)="onSubmit()">Enviar</button>
+
+    </form>
+
 
 </main>

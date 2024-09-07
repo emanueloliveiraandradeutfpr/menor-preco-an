@@ -1,7 +1,7 @@
 <header>
     <div class="nav-wrapper">
 
-        <a [href]="['/']">
+        <a routerLink="/">
             <div class="logo">
                 <img ngSrc="logo.svg" alt="Cesta de frutas" width="40"
                     height="38" priority />
@@ -10,10 +10,10 @@
         </a>
         <ul class="ul-wrapper">
             <li>
-                <a [href]="['/list']">Minha Lista</a>
+                <a routerLink="/list">Minha Lista</a>
             </li>
             <li>
-                <a [href]="['/account']">Minha Conta</a>
+                <a routerLink="/account">Minha Conta</a>
             </li>
         </ul>
     </div>
