@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { ScannerComponent } from '../scanner/scanner.component';
 import {
   FormControl,
@@ -7,6 +7,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,9 @@ import {
 export class HomeComponent {
   useForm: FormGroup;
 
-  constructor() {
+  @Output() searchTerm: String = '';
+
+  constructor(private router: Router = new Router()) {
     this.useForm = new FormGroup({
       searchTerm: new FormControl('', [
         Validators.minLength(2),
@@ -28,7 +31,9 @@ export class HomeComponent {
   }
 
   onSubmit() {
-    console.log(this.useForm.value);
+    this.searchTerm = this.useForm.value.searchTerm;
+    console.log(this.searchTerm);
     this.useForm.reset();
+    this.router.navigate([`/result/${this.searchTerm}`]);
   }
 }

@@ -1,4 +1,4 @@
-<main>
+<section class="home-wrapper">
     <app-scanner></app-scanner>
 
     <form [formGroup]="useForm">
@@ -10,10 +10,8 @@
                 name="searchTerm"
                 id="searchTerm"
                 placeholder="Arroz">
+            <button type="button" (click)="onSubmit()">Enviar</button>
         </div>
-        <button type="button" (click)="onSubmit()">Enviar</button>
 
     </form>
-
-
-</main>
+</section>
